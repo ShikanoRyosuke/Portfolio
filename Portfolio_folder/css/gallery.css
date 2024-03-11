@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+html {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/BackgroundImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+  /* スクロールバー非表示 */
+  display: none;
+}
+
+.gallery-container {
+  margin-top: 90px;
+}
+
+.contents-container {
+  display: flex;
+  justify-content: center;
+  padding: 2% 0;
+}
+
+.gallery_container {
+  width: 980px;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.title-erea h1 {
+  font-size: 60px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: rgb(64, 64, 64);
+}
+
+.title-erea p {
+  display: block;
+  font-size: 14px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.title-erea hr {
+  width: 5%;
+  margin: 0 auto;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  color: #272727;
+}
+
+.gallery {
+  -moz-columns: 3;
+  columns: 3;
+}
+
+.gallery li {
+  list-style: none;
+  margin-left: 0px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.gallery_container img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-radius: 2px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* sidebar =====================*/
+/*  filter-container */
+.sidebar {
+  width: 260px;
+  padding: 10px 0 0 10px;
+}
+
+.filter-head {
+  margin-top: 10px;
+  font-size: 16px;
+  color: white;
+  padding: 15px;
+  background-color: rgb(7, 12, 26);
+  border-radius: 10px 10px 0 0;
+}
+
+.filter-head::after {
+  content: " ▼";
+  font-size: 10px;
+}
+
+#filter-head-first {
+  margin-top: 0;
+}
+
+.filterBtn {
+  font-size: 12.5px;
+  padding: 1.5em 0px 1em 30px;
+  background-color: rgb(12, 24, 37);
+  color: rgb(190, 190, 190);
+  text-decoration: underline;
+  text-decoration-color: rgb(190, 190, 190);
+  cursor: pointer;
+  list-style-type: disc;
+}
+
+#filterBtn-fisrt {
+  padding-top: 2.5em;
+}
+
+.filterBtn:last-child {
+  padding-bottom: 4em;
+  border-radius: 0 0 10px 10px;
+}
+
+.all_contents {
+  color: rgb(255, 255, 255);
+  text-decoration-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.filterBtn:hover {
+  color: rgb(255, 255, 255);
+  text-decoration-color: rgb(255, 255, 255);
+}
+
+.filterBtnPush {
+  color: rgb(255, 255, 255);
+  text-decoration-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+    /*==================================================
+    動かしたい動き（今回は” ふわっ” を採用）
+    ===================================*/
+.fadeUp {
+  animation-name: galleryFadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes galleryFadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  ================================
+    モバイル版の作成 
+    ================*/
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+
+  .gallery {
+    -moz-columns: 3;
+    columns: 3;
+    padding: 0 3% 3% 3%;
+  }
+
+  /*横幅が600px以下になった際の指定*/
+}
+
+@media only screen and (max-width: 1200px) and (max-width: 600px) {
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: none;
+  }
+
+  .gallery_area {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title-erea h1 {
+    font-size: 2.4em;
+    text-align: center;
+    padding: 5%;
+    color: rgb(64, 64, 64);
+  }
+
+  .title-erea p {
+    font-size: 0.1em;
+    padding-top: 2em;
+  }
+
+  .gallery {
+    -moz-columns: 1;
+    columns: 1;
+    padding: 0;
+    /*ギャラリーに余白をつける*/
+  }
+
+  .gallery li {
+    list-style: none;
+    margin-left: 0;
+    margin-left: 0;
+    margin-bottom: 5%;
+    padding: 0 2%;
+  }
+
+  .gallery_container {
+    width: 100%;
+  }
+
+  .gallery_container img {
+    width: 100%;
+    height: 300px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .title-erea p {
+    font-size: 0.6em;
+    padding:5%;
+  }
+  
+  .title-erea hr {
+    width: 5%;
+    margin: 0 auto;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    color: #272727;
+  }
+
+  .sort-btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0 60px 0;
+  }
+
+  .sort-btn li {
+    background: #b8b8b8;
+    list-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px;
+    margin: 0 8px;
+    color: #292929;
+  }
+
+  .gallery_container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}
+
+/*# sourceMappingURL=gallery.css.map */

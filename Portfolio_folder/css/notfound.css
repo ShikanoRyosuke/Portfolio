@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+html {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/BackgroundImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.notfound_text {
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 150px;
+  text-align: center;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+
+.notfound_text h1 {
+  font-size: 100px;
+  padding: 60px 0 0 0;
+  color: rgb(66, 66, 66);
+  text-decoration: underline;
+}
+
+.notfound_text h2 {
+  font-size: 16px;
+  padding: 0 0 30px 0;
+  color: rgb(32, 32, 32);
+}
+
+.notfound_text .notfound_img {
+  width: 120px;
+  padding: 40px 20px 0 20px;
+}
+
+.notfound_text h3 {
+  font-size: 20px;
+  padding: 0 0 70px 0;
+}
+
+.notfound_text h3 a {
+  padding: 18px;
+  color: rgb(56, 95, 133);
+}
+
+.notfound_text h3 a:hover {
+  text-decoration: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+/* ======= 横幅600px以下の段組み設定 =======*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: none;
+  }
+
+  .notfound_text {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .notfound_text h1 {
+    font-size: 2.9em;
+    padding: 10% 0 0 0;
+  }
+
+  .notfound_text h2 {
+    font-size: 0.8em;
+    padding-bottom: 10%;
+    color: rgb(32, 32, 32);
+  }
+
+  .notfound_text .notfound_img {
+    width: 20%;
+    padding: 2%;
+  }
+
+  .notfound_text h3 {
+    font-size: 0.9em;
+    padding: 0 0 70px 0;
+  }
+
+  .notfound_text a {
+    padding: 18px;
+    color: rgb(56, 95, 133);
+  }
+
+  footer {
+    display: block;
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+/*# sourceMappingURL=notfound.css.map */

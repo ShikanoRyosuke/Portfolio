@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+header {
+  font-family: serif, sans-serif;
+}
+
+@media (min-width: 1201px) {
+  .mobile_name {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* ===== モバイルヘッダー ===== */
+@media (max-width: 600px) {
+
+  #header,
+  .pc-header {
+    display: none;
+    /* 600px以下でpc-headerを表示させない */
+  }
+
+  .mobile-fixed-header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    font-size: 1.5em;
+    color: #fff;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    z-index: 999;
+    top: 0;
+  }
+
+  .mobile-fixed-header img {
+    display: block;
+    width: 60px;
+  }
+
+  /* ここから下がハンバーガーメニューに関するCSS */
+  /* チェックボックスを非表示にする */
+  .drawer_hidden {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 80px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    /* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 50px;
+    border-radius: 10px;
+    background: #8a8a8a;
+    transition: 0.11s;
+    position: absolute;
+  }
+
+  .nav {
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+
+  .drawer_open {
+    line-height: 100px;
+  }
+
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 90%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    transition: 0.4s;
+    background-color: rgb(32, 32, 32);
+  }
+
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    width: 80%;
+    text-align: left;
+    list-style: none;
+  }
+
+  .nav_list li {
+    padding: 5% 15%;
+    font-size: 0.8em;
+  }
+
+  .nav_list:first-child {
+    margin-top: 15vh;
+  }
+
+  .nav_list a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-weight: 500;
+  }
+
+  .mobile-header_snsIcon {
+    display: none;
+  }
+
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked~.nav_content {
+    left: 20%;
+    width: 100%;
+    /* メニューを画面に入れる */
+  }
+
+  .logo {
+    padding-left: 4%;
+    padding-top: 10px;
+  }
+
+  .nav_list br {
+    display: inline-block;
+    width: 90%;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=all_mobileHeader.css.map */

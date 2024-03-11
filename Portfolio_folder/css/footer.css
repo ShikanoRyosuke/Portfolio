@@ -1,0 +1,17 @@
+footer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(34, 34, 34);
+}
+
+#copyright {
+  display: block;
+  width: auto;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 3em;
+  font-size: 11px;
+}
+
+/*# sourceMappingURL=footer.css.map */

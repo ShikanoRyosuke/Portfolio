@@ -1,0 +1,191 @@
+  /* scrollFadeIn-top 上からfadein */
+  .scrollFadeIn-top.active {
+    animation: 1s scrollFadeIn-top ease-in-out forwards;
+  }
+
+  @keyframes scrollFadeIn-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* scrollFadeIn-right 左からfadein */
+  /* index.php => newsarea text */
+  .scrollFadeIn-right.active {
+    animation: 1s scrollFadeIn-right ease-in-out forwards;
+  }
+
+  @keyframes scrollFadeIn-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
+  /* Template.php => h1*/
+  .fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUpAnime {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .delay-time01 {
+    animation-delay: 0.6s;
+  }
+
+  .delay-time02 {
+    animation-delay: 0.7s;
+  }
+
+  .delay-time03 {
+    animation-delay: 0.8s;
+  }
+
+  .delay-time04 {
+    animation-delay: 0.9s;
+  }
+
+  .delay-time05 {
+    animation-delay: 1s;
+  }
+
+  .delay-time06 {
+    animation-delay: 1.1s;
+  }
+
+  .delay-time07 {
+    animation-delay: 11.2s;
+  }
+
+  .delay-time08 {
+    animation-delay: 1.3s;
+  }
+
+  .delay-time09 {
+    animation-delay: 1.4s;
+  }
+
+  .delay-time10 {
+    animation-delay: 1.5s;
+  }
+
+
+  /*==================================================
+  じわっ
+===================================*/
+  /* ぼかしから出現 */
+
+  /* index.php => top-list li*/
+  .animation-blur {
+    animation-name: blurAnime;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes blurAnime {
+    from {
+      filter: blur(10px);
+      transform: scale(1.02);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /*==================================================
+  じわっ2
+===================================*/
+  /* ぼかしから出現2 */
+
+  /* index.php => top-list li*/
+  .animation-blur2 {
+    animation-name: blurAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes blurAnime {
+    from {
+      filter: blur(10px);
+      transform: scale(1.02);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  /* index.php => top-list modal-content*/
+  .animation-blur_modal-content {
+    animation-name: blurAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes blurAnime {
+    from {
+      filter: blur(10px);
+      transform: scale(1.02);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+  /* index.php => top-list modal-content*/
+  .animation-blur_newsText {
+    animation-name: blurAnime;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes blurAnime {
+    from {
+      filter: blur(10px);
+      transform: scale(1.02);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
