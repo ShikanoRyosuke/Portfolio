@@ -19,7 +19,6 @@ def rename_and_convert_to_jpeg(folder_path):
             os.remove(file_path)
             file_path = jpeg_file_path
         
-        # ファイル名を「蝮よ悽_<連番>」に変更
         new_filename = f'C_contents_{counter}.jpeg'
         new_file_path = os.path.join(folder_path, new_filename)
         os.rename(file_path, new_file_path)
